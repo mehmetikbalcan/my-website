@@ -26,12 +26,39 @@
     <main>
         <section class="content-section">
             <h2>Makaleler</h2>
-            <p>Bu bölümde, çeşitli makalelerimi paylaşacağım.</p>
+            <div id="makaleler-list"></div>
+            <div id="makale-content" style="margin-top: 20px;"></div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Mehmet İkbal Can. Tüm hakları saklıdır.</p>
+        <div style="display: flex; justify-content: space-between;">
+            <p style="font-style: italic; font-weight: 200; font-size: 1.2rem;">Sadece Sevgi</p>
+            <p>&copy; 2024 Mehmet İkbal Can. Tüm hakları saklıdır.</p>
+        </div>
     </footer>
+
+    <script>
+        // Fetch and display the articles with click-to-reveal content
+        fetch('makaleler.json')
+            .then(response => response.json())
+            .then(data => {
+                const articlesList = document.getElementById('makaleler-list');
+                const contentDiv = document.getElementById('makale-content');
+
+                data.forEach((article, index) => {
+                    const articleTitle = document.createElement('h3');
+                    articleTitle.innerHTML = `<a href="#" data-index="${index}">${article.title}</a>`;
+                    articlesList.appendChild(articleTitle);
+                    
+                    // Event listener to reveal content when the title is clicked
+                    articleTitle.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const articleIndex = event.target.getAttribute('data-index');
+                        contentDiv.innerHTML = `<h3>${data[articleIndex].title}</h3><p>${data[articleIndex].content}</p>`;
+                    });
+                });
+            });
+    </script>
 </body>
 </html>
