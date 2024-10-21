@@ -1,3 +1,25 @@
+/* Define IBM Plex Sans Fonts */
+@font-face {
+    font-family: 'IBM Plex Sans Thin';
+    src: url('fonts/IBM_Plex_Sans/IBMPlexSans-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Medium';
+    src: url('fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans ExtraLight Italic';
+    src: url('fonts/IBM_Plex_Sans/IBMPlexSans-ExtraLightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
 /* General Reset */
 * {
     margin: 0;
@@ -7,9 +29,10 @@
 
 /* Body and Main Styles */
 body {
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-family: 'IBM Plex Sans Thin', sans-serif;
+    background-color: white;
+    color: black;
     line-height: 1.6;
-    background-color: #fff;
 }
 
 header {
@@ -18,11 +41,10 @@ header {
     text-align: center;
 }
 
-.working-header a {
-    text-decoration: none;
-    color: #000;
-    font-weight: normal;
-    font-size: 2rem;
+.working-header h1 {
+    font-family: 'IBM Plex Sans ExtraLight Italic', sans-serif;
+    font-size: 3rem;
+    text-align: center;
 }
 
 nav ul {
@@ -37,6 +59,7 @@ nav a {
     text-decoration: none;
     color: #000;
     font-size: 1.2rem;
+    font-family: 'IBM Plex Sans Medium', sans-serif;
 }
 
 main {
@@ -50,76 +73,69 @@ main {
 /* About Section Styling */
 .about-section {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: auto;
     padding: 3rem;
 }
 
-.header-quote p {
-    font-family: 'IBM Plex Sans Condensed Thin', sans-serif;
-    font-size: 1.8rem;
+.text-section {
+    max-width: 50%;
+    font-family: 'IBM Plex Sans Thin', sans-serif;
+}
+
+.text-section h2 {
+    font-family: 'IBM Plex Sans ExtraLight Italic', sans-serif;
+    font-size: 2.5rem;
     font-style: italic;
     margin-bottom: 1rem;
     text-align: center;
 }
 
-.content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
-
-.text-section {
-    max-width: 50%;
-    font-size: 1.2rem;
-}
-
 .image-section img {
-    max-width: 300px;
-    height: auto;
+    max-width: 400px;
+    margin-left: 3rem;
     border-radius: 5px;
 }
 
-/* Contact Section */
+/* Contact Section Styling */
 .contact-section {
     text-align: center;
     padding: 3rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .contact-section h2 {
-    font-family: 'IBM Plex Sans Condensed Light', sans-serif;
+    font-family: 'IBM Plex Sans Medium', sans-serif;
     font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
-.contact-wrapper {
+.contact-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    gap: 2rem;
+    max-width: 900px;
+    margin: auto;
 }
 
-.contact-text {
-    font-family: 'IBM Plex Sans Condensed Thin', sans-serif;
-    font-size: 1.2rem;
+.contact-info {
+    font-family: 'IBM Plex Sans Thin', sans-serif;
+    text-align: left;
 }
 
-.contact-text a {
-    color: #000;
+.contact-info a {
+    color: black;
     text-decoration: none;
 }
 
 .contact-image img {
-    max-width: 300px;
+    max-width: 400px;
     border-radius: 5px;
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
     background-color: #fff;
     text-align: center;
