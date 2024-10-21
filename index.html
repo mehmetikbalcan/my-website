@@ -1,30 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehmet Ikbal Can's Website</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your styles.css -->
+    <title>Anasayfa ve İletişim - Mehmet İkbal Can</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
+    <!-- Separate Working Header for Anasayfa -->
+    <header class="anasayfa-header">
+        <div class="working-header">
+            <h1><a href="#anasayfa">Mehmet İkbal Can</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#anasayfa">Anasayfa</a></li>
+                <li><a href="#projeler">Projeler</a></li>
+                <li><a href="#makaleler">Makaleler</a></li>
+                <li><a href="#yazilar">Yazılar</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Welcome! I’m Mehmet Ikbal Can, and this is a brief introduction about myself.</p>
-        </section>
+    <!-- Anasayfa Section -->
+    <section id="anasayfa" class="about-section">
+        <div class="content-wrapper">
+            <div class="text-section">
+                <p>Merhaba ben İkbal. Abdullah Gül Üniversitesinde Endüstri Mühendisliği ana bilim dalında asistan profesörlük yapmaktayım. Aktif olarak makine öğrenmesi, yöneylem ve lojistik sistemlerde optimizasyon gibi alanlarda araştırma yapmaktayım. Aynı zamanda Kayseride üretim yapmakta olan firmalara danışmanlık vermekteyim. Bir yandan da web sitemde bloglar ve yazılar paylaşmakta ekonomi, sağlık ve psikoloji gibi alanlarla ilgili düşüncelerimi, araştırmalarımı paylaşmaktayım. Şu an için bu siteyi daha çok yazı yazmak, bilgilerimi tazelemek ve aynı zamanda kendimi daha iyi ifade edebilmek amacıyla oluşturdum. Keyifli okumalar dilerim…</p>
+            </div>
+        </div>
+    </section>
 
-        <section>
-            <h2>Projects</h2>
-            <p>Here you will find all the amazing projects I am working on.</p>
-        </section>
-    </main>
+    <!-- Separate Working Header for İletişim -->
+    <header class="iletisim-header">
+        <div class="working-header">
+            <h1><a href="#iletisim">Mehmet İkbal Can - İletişim</a></h1>
+        </div>
+    </header>
+
+    <!-- İletişim Section -->
+    <section id="iletisim" class="contact-section">
+        <h2>İletişim</h2>
+        <div class="contact-wrapper">
+            <div class="contact-text">
+                <p>Email: <a href="mailto:canmehmetikbal@gmail.com">canmehmetikbal@gmail.com</a></p>
+                <p>Fen Bilimleri Enstitüsü<br> Abdullah Gül Üniversitesi<br> Kayseri, Türkiye</p>
+                <p><a href="#">X</a> | <a href="#">Instagram</a></p>
+            </div>
+            <div class="contact-image">
+                <img src="https://i.ibb.co/Lvc4zks/image.jpg" alt="Mehmet İkbal Can">
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Mehmet Ikbal Can. All Rights Reserved.</p>
+        <p>&copy; 2024 Mehmet İkbal Can. Tüm hakları saklıdır.</p>
     </footer>
 </body>
 </html>
