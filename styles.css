@@ -146,12 +146,11 @@ nav a {
 /* Footer Styling */
 footer {
     background-color: #fff;
-    display: flex; /* Use flexbox for alignment */
+    display: flex;
     justify-content: space-between; /* Space items to opposite sides */
-    align-items: center; /* Vertically center the content */
+    align-items: center;
     padding: 1rem;
-    color: black;
-    width: 100%; /* Ensure footer takes full width */
+    width: 100%; /* Ensure the footer spans the full width of the page */
 }
 
 footer p {
@@ -162,9 +161,11 @@ footer p:first-child {
     font-style: italic;
     font-weight: 200;
     font-size: 1.2rem; /* Slightly bigger font for "Sadece Sevgi" */
+    text-align: left; /* Align the "Sadece Sevgi" text to the left */
 }
 
 footer p:last-child {
     font-weight: 100;
-    text-align: right;
+    text-align: right; /* Force the alignment to the right */
+    margin-left: auto; /* Pushes this paragraph to the right */
 }
