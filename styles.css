@@ -9,10 +9,10 @@
 body {
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     line-height: 1.6;
-    background-color: #fff;
-    color: #000;
+    background-color: white;
 }
 
+/* Center header text */
 header {
     background-color: #fff;
     padding: 1rem;
@@ -22,10 +22,13 @@ header {
 .working-header a {
     text-decoration: none;
     color: #000;
-    font-weight: normal; /* No bold */
+    font-weight: normal;
     font-size: 1.8rem;
+    display: inline-block;
+    margin: 0 auto;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 1rem;
@@ -40,15 +43,7 @@ nav a {
     font-size: 1.2rem;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem;
-}
-
-/* About Section Styling */
+/* About Section Styling (Anasayfa) */
 .about-section {
     display: flex;
     justify-content: space-between;
@@ -68,17 +63,13 @@ main {
 .text-section {
     max-width: 50%;
     font-size: 1.2rem;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
-.image-section img {
-    max-width: 400px;
-    border-radius: 5px;
-}
-
-/* Contact Section */
+/* Contact Section (İletişim) */
 .contact-section {
     text-align: center;
-    padding: 3rem;
+    padding: 5rem 2rem 3rem; /* Increased padding to add space from the header */
 }
 
 .contact-section h2 {
