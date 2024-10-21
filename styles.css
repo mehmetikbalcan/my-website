@@ -111,9 +111,9 @@ nav a {
 
 .contact-section h2 {
     font-family: 'IBM Plex Sans';
-    font-weight: 300; /* Make the font thinner */
+    font-weight: 300;
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 20px; /* Add some space below the heading */
 }
 
 /* Contact Wrapper */
