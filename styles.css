@@ -9,10 +9,9 @@
 body {
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     line-height: 1.6;
-    background-color: white;
+    background-color: #fff;
 }
 
-/* Center header text */
 header {
     background-color: #fff;
     padding: 1rem;
@@ -23,10 +22,9 @@ header {
     text-decoration: none;
     color: #000;
     font-weight: normal;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
-/* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 1rem;
@@ -41,20 +39,38 @@ nav a {
     font-size: 1.2rem;
 }
 
-/* About Section Styling (Anasayfa) */
-.about-section {
+main {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+/* About Section Styling */
+.about-section {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     max-width: 1200px;
     margin: auto;
     padding: 3rem;
 }
 
+.header-quote p {
+    font-family: 'IBM Plex Sans Condensed Thin', sans-serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
 .content-wrapper {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
 }
 
 .text-section {
@@ -63,11 +79,50 @@ nav a {
 }
 
 .image-section img {
-    max-width: 300px; /* Adjust the image size */
+    max-width: 300px;
+    height: auto;
     border-radius: 5px;
 }
 
 /* Contact Section */
 .contact-section {
     text-align: center;
-  
+    padding: 3rem;
+    margin-top: 5rem;
+}
+
+.contact-section h2 {
+    font-family: 'IBM Plex Sans Condensed Light', sans-serif;
+    font-size: 2rem;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.contact-text {
+    font-family: 'IBM Plex Sans Condensed Thin', sans-serif;
+    font-size: 1.2rem;
+}
+
+.contact-text a {
+    color: #000;
+    text-decoration: none;
+}
+
+.contact-image img {
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem;
+    color: #000;
+}
