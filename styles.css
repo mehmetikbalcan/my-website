@@ -2,6 +2,7 @@
 @font-face {
     font-family: 'IBM Plex Sans Thin';
     src: url('fonts/IBM_Plex_Sans/IBMPlexSans-Thin.ttf') format('truetype');
+    font-display: swap; /* Enables FOUT */
     font-weight: normal;
     font-style: normal;
 }
@@ -9,6 +10,7 @@
 @font-face {
     font-family: 'IBM Plex Sans Medium';
     src: url('fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf') format('truetype');
+    font-display: swap; /* Enables FOUT */
     font-weight: normal;
     font-style: normal;
 }
@@ -16,6 +18,7 @@
 @font-face {
     font-family: 'IBM Plex Sans ExtraLight Italic';
     src: url('fonts/IBM_Plex_Sans/IBMPlexSans-ExtraLightItalic.ttf') format('truetype');
+    font-display: swap; /* Enables FOUT */
     font-weight: normal;
     font-style: italic;
 }
@@ -29,7 +32,7 @@
 
 /* Body and Main Styles */
 body {
-    font-family: 'IBM Plex Sans Thin', sans-serif;
+    font-family: 'IBM Plex Sans Thin', 'Arial', sans-serif; /* Added fallback fonts */
     background-color: white;
     color: black;
     line-height: 1.6;
@@ -42,7 +45,7 @@ header {
 }
 
 .working-header h1 {
-    font-family: 'IBM Plex Sans ExtraLight Italic', sans-serif;
+    font-family: 'IBM Plex Sans ExtraLight Italic', 'Arial', sans-serif; /* Fallback font */
     font-size: 3rem;
     text-align: center;
 }
@@ -59,7 +62,7 @@ nav a {
     text-decoration: none;
     color: #000;
     font-size: 1.2rem;
-    font-family: 'IBM Plex Sans Medium', sans-serif;
+    font-family: 'IBM Plex Sans Medium', 'Arial', sans-serif; /* Fallback font */
 }
 
 main {
@@ -82,11 +85,11 @@ main {
 
 .text-section {
     max-width: 50%;
-    font-family: 'IBM Plex Sans Thin', sans-serif;
+    font-family: 'IBM Plex Sans Thin', 'Arial', sans-serif;
 }
 
 .text-section h2 {
-    font-family: 'IBM Plex Sans ExtraLight Italic', sans-serif;
+    font-family: 'IBM Plex Sans ExtraLight Italic', 'Arial', sans-serif; /* Fallback font */
     font-size: 2.5rem;
     font-style: italic;
     margin-bottom: 1rem;
@@ -107,7 +110,7 @@ main {
 }
 
 .contact-section h2 {
-    font-family: 'IBM Plex Sans Medium', sans-serif;
+    font-family: 'IBM Plex Sans Medium', 'Arial', sans-serif;
     font-size: 2rem;
     margin-bottom: 2rem;
 }
@@ -121,7 +124,7 @@ main {
 }
 
 .contact-info {
-    font-family: 'IBM Plex Sans Thin', sans-serif;
+    font-family: 'IBM Plex Sans Thin', 'Arial', sans-serif;
     text-align: left;
 }
 
