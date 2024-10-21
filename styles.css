@@ -1,3 +1,24 @@
+/* Import Local Fonts */
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('fonts/IBM_Plex_Sans/IBMPlexSans-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('fonts/IBM_Plex_Sans/IBMPlexSans-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
 /* General Reset */
 * {
     margin: 0;
@@ -41,8 +62,12 @@ nav a {
     font-size: 1.2rem;
 }
 
-/* Anasayfa Section Styling */
-.about-section {
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling for all subheads */
+.section {
     text-align: center;
     padding: 4rem 2rem;
 }
@@ -52,8 +77,18 @@ nav a {
     font-size: 2.2rem;
     font-style: italic;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
+/* Footer Styling */
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem;
+    color: #000;
+}
+
+/* Shared Image and Text Layout */
 .text-image-section {
     display: flex;
     justify-content: center;
@@ -73,10 +108,70 @@ nav a {
     border-radius: 5px;
 }
 
-/* Footer Styling */
-footer {
-    background-color: #fff;
+/* Page-specific Content Styling */
+.section-content {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Adjustments for "Forward young men..." text on Anasayfa */
+.forward-text {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
     text-align: center;
-    padding: 1rem;
-    color: #000;
+}
+
+/* Layout for text and image in Anasayfa */
+.text-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.text-section {
+    font-size: 1.5rem;
+}
+
+.image-section img {
+    width: 220px;
+    height: auto;
+}
+
+/* Adjustments for İletişim page to scroll down */
+.contact-section {
+    padding-top: 6rem; /* Push the contact section lower down the page */
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.contact-text {
+    font-family: 'IBM Plex Sans Thin', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-right: 2rem;
+}
+
+.contact-image img {
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .text-image-section {
+        flex-direction: column;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .image-section img {
+        margin-bottom: 2rem;
+    }
 }
