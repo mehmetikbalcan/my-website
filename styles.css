@@ -46,7 +46,7 @@ header {
 header h1 {
     font-family: 'IBM Plex Sans';
     font-weight: 500; /* Make the font weight match the subheads */
-    font-size: 2.2rem; /* Slightly smaller font size for the main heading */
+    font-size: 1.8rem; /* Slightly smaller font size for the main heading */
     margin-bottom: 0.5rem; /* Reduce the space below the main heading */
 }
 
