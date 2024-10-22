@@ -115,6 +115,49 @@ nav a {
     margin-bottom: 2rem; /* Add space below the intro text */
 }
 
+/* Styling for poem display */
+.poem {
+    display: flex; /* Side by side layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Vertically center the image and text */
+    gap: 20px; /* Space between the image and poem */
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.poem img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.poem-content {
+    text-align: left; /* Align the poem text to the left */
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.poem-footer {
+    font-size: 0.9rem;
+    color: gray;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.poem-footer span {
+    display: flex;
+    align-items: center;
+}
+
+.poem-footer span img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
 /* Contact Section */
 .contact-section {
     padding: 3rem;
