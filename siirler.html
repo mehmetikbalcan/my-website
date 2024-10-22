@@ -26,7 +26,7 @@
     <main>
         <section class="content-section">
             <h2 class="siirler-intro-text">Karanlık yeterince etrafı sarmamışsa gün doğmaz</h2>
-            <p>Bu bölümde, çeşitli şiirlerimi paylaşacağım.</p>
+            <div id="poems-container"></div>
         </section>
     </main>
 
@@ -36,5 +36,30 @@
             <p>&copy; 2024 Mehmet İkbal Can. Tüm hakları saklıdır.</p>
         </div>
     </footer>
+
+    <script>
+        // Fetch and display the poems
+        fetch('poems.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('poems-container');
+                
+                data.forEach(poem => {
+                    const poemDiv = document.createElement('div');
+                    poemDiv.classList.add('poem');
+                    
+                    // Create poem structure
+                    poemDiv.innerHTML = `
+                        <h3>${poem.title}</h3>
+                        <img src="${poem.image}" alt="${poem.title}" style="max-width: 300px; height: auto;">
+                        <p>${poem.content}</p>
+                        <p><strong>Writer:</strong> ${poem.writer} <br><strong>Date Published:</strong> ${poem.date}</p>
+                    `;
+                    
+                    // Append the poem to the container
+                    container.appendChild(poemDiv);
+                });
+            });
+    </script>
 </body>
 </html>
