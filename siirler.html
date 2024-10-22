@@ -50,10 +50,15 @@
                     
                     // Create poem structure
                     poemDiv.innerHTML = `
-                        <h3>${poem.title}</h3>
-                        <img src="${poem.image}" alt="${poem.title}" style="max-width: 300px; height: auto;">
-                        <p>${poem.content}</p>
-                        <p><strong>Writer:</strong> ${poem.writer} <br><strong>Date Published:</strong> ${poem.date}</p>
+                        <img src="${poem.image}" alt="${poem.title}">
+                        <div class="poem-content">
+                            <h3>${poem.title}</h3>
+                            <p>${poem.content}</p>
+                            <div class="poem-footer">
+                                <span><img src="images/writer-icon.png" alt="Writer"> ${poem.writer}</span>
+                                <span><img src="images/date-icon.png" alt="Date"> ${poem.date}</span>
+                            </div>
+                        </div>
                     `;
                     
                     // Append the poem to the container
