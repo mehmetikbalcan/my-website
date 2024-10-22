@@ -106,6 +106,19 @@ nav a {
     border-radius: 5px;
 }
 
+/* Link Styling for Makaleler Titles */
+#makaleler-list a {
+    color: black; /* Set link color to black */
+    text-decoration: none; /* Remove the underline */
+    font-size: 1.2rem; /* Adjust the font size if necessary */
+    font-weight: 500; /* Ensure it has the same weight as other titles */
+}
+
+#makaleler-list a:hover {
+    text-decoration: underline; /* Add underline on hover for better UX */
+}
+
+
 /* Intro Text for Şiirler */
 .siirler-intro-text {
     font-family: 'IBM Plex Sans', sans-serif;
