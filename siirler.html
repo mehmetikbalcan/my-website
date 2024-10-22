@@ -38,33 +38,37 @@
     </footer>
 
     <script>
-        // Fetch and display the poems
-        fetch('poems.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('poems-container');
+    // Fetch and display the poems
+    fetch('poems.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('poems-container');
+            
+            data.forEach(poem => {
+                const poemDiv = document.createElement('div');
+                poemDiv.classList.add('poem');
                 
-                data.forEach(poem => {
-                    const poemDiv = document.createElement('div');
-                    poemDiv.classList.add('poem');
-                    
-                    // Create poem structure
-                    poemDiv.innerHTML = `
-                        <img src="${poem.image}" alt="${poem.title}">
-                        <div class="poem-content">
-                            <h3>${poem.title}</h3>
-                            <p>${poem.content}</p>
-                            <div class="poem-footer">
-                                <span><img src="images/writer-icon.png" alt="Writer"> ${poem.writer}</span>
-                                <span><img src="images/date-icon.png" alt="Date"> ${poem.date}</span>
-                            </div>
+                // Replace \n with <br> for line breaks
+                const formattedContent = poem.content.replace(/\n/g, '<br>');
+                
+                // Create poem structure
+                poemDiv.innerHTML = `
+                    <img src="${poem.image}" alt="${poem.title}">
+                    <div class="poem-content">
+                        <h3>${poem.title}</h3>
+                        <p>${formattedContent}</p>
+                        <div class="poem-footer">
+                            <span><img src="images/writer-icon.png" alt="Writer"> ${poem.writer}</span>
+                            <span><img src="images/date-icon.png" alt="Date"> ${poem.date}</span>
                         </div>
-                    `;
-                    
-                    // Append the poem to the container
-                    container.appendChild(poemDiv);
-                });
+                    </div>
+                `;
+                
+                // Append the poem to the container
+                container.appendChild(poemDiv);
             });
+        });
     </script>
+
 </body>
 </html>
