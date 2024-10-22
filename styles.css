@@ -115,24 +115,34 @@ nav a {
     margin-bottom: 2rem; /* Add space below the intro text */
 }
 
-/* Styling for poem display */
+/* Poem Structure Styling */
 .poem {
-    display: flex; /* Side by side layout */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Vertically center the image and text */
-    gap: 20px; /* Space between the image and poem */
     margin-bottom: 2rem;
     padding: 1rem;
 }
 
+.poem-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.poem-block {
+    display: flex; /* Side by side layout */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between the image and poem content */
+}
+
 .poem img {
-    max-width: 500px;
+    max-width: 500px; /* Make the image bigger */
     height: auto;
     border-radius: 5px;
 }
 
 .poem-content {
-    text-align: left; /* Align the poem text to the left */
+    text-align: left;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.2rem;
     font-style: italic;
@@ -142,9 +152,10 @@ nav a {
     font-size: 0.9rem;
     color: gray;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 10px;
+    margin-top: 1rem; /* Add space above the footer */
 }
 
 .poem-footer span {
@@ -157,6 +168,7 @@ nav a {
     height: 16px;
     margin-right: 5px;
 }
+
 
 /* Contact Section */
 .contact-section {
