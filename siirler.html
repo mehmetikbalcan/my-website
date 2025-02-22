@@ -32,10 +32,10 @@
     </main>
 
     <footer>
-    <div style="display: flex; justify-content: space-between; width: 100%;">
-        <p style="font-style: italic; font-weight: 200; font-size: 1.2rem; text-align: left;">Sadece Sevgi</p>
-        <p style="font-weight: 100; text-align: right; margin-left: auto;">&copy; 2024 Mehmet İkbal Can. Tüm hakları saklıdır.</p>
-    </div>
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+            <p style="font-style: italic; font-weight: 200; font-size: 1.2rem; text-align: left;">Sadece Sevgi</p>
+            <p style="font-weight: 100; text-align: right; margin-left: auto;">&copy; 2024 Mehmet İkbal Can. Tüm hakları saklıdır.</p>
+        </div>
     </footer>
 
     <script>
@@ -48,12 +48,12 @@
                 data.forEach(poem => {
                     const poemDiv = document.createElement('div');
                     poemDiv.classList.add('poem');
-                    
+
                     // Replace \n with <br> for line breaks
                     const formattedContent = poem.content.replace(/\n/g, '<br>');
-                    
+
                     // Create poem structure
-                    poemDiv.innerHTML = 
+                    poemDiv.innerHTML = `
                         <h3 class="poem-title">${poem.title}</h3>
                         <div class="poem-block">
                             <img src="${poem.image}" alt="${poem.title}">
@@ -65,12 +65,13 @@
                             <span><img src="images/writer-icon.png" alt="Writer"> ${poem.writer}</span>
                             <span><img src="images/date-icon.png" alt="Date"> ${poem.date}</span>
                         </div>
-                    ;
+                    `;
                     
                     // Append the poem to the container
                     container.appendChild(poemDiv);
                 });
-            });
+            })
+            .catch(error => console.error('Error loading poems:', error));
     </script>
     <script src="scripts.js"></script>
 
