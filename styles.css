@@ -288,12 +288,16 @@ nav a {
 /* Footer Styling */
 footer {
     background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    width: 100%;
     flex-wrap: wrap;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
 }
 
 footer p {
@@ -305,13 +309,16 @@ footer p:first-child {
     font-weight: 200;
     font-size: 1.2rem;
     text-align: left;
+    padding-left: 1rem;
 }
 
 footer p:last-child {
     font-weight: 100;
     text-align: right;
     margin-left: auto;
+    padding-right: 1rem;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
