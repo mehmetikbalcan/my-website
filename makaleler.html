@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makaleler - Mehmet İkbal Can</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Mehmet İkbal Can</h1>
+        </div>
+        <nav>
+            <button id="menu-toggle" class="hamburger-menu">☰</button>
+            <ul id="menu" class="menu">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="makaleler.html">Makaleler</a></li>
+                <li><a href="kitap-incelemeleri.html">Kitap İncelemeleri</a></li>
+                <li><a href="siirler.html">Şiirler</a></li>
+                <li><a href="projeler.html">Projeler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>Makaleler</h2>
+            <div id="makaleler-list"></div>
+            <div id="makale-content" style="margin-top: 20px;"></div>
+        </section>
+    </main>
+
+    <footer>
+    <div style="display: flex; justify-content: space-between; width: 100%;">
+        <p style="font-style: italic; font-weight: 200; font-size: 1.2rem; text-align: left;">Sadece Sevgi</p>
+<<<<<<< HEAD
+        <p style="font-weight: 100; text-align: right; margin-left: auto;">&copy; 2025 Mehmet İkbal Can. Tepki verme hakkını saklı tutar.</p>
+=======
+        <p style="font-weight: 100; text-align: right; margin-left: auto;">&copy; 2024 Mehmet İkbal Can. Tüm hakları saklıdır.</p>
+>>>>>>> 7611c43aeafc6d48971707e99cf693879f0ffd47
+    </div>
+    </footer>
+
+    <script>
+        // Fetch and display the articles with click-to-reveal content
+        fetch('makaleler.json')
+            .then(response => response.json())
+            .then(data => {
+                const articlesList = document.getElementById('makaleler-list');
+                const contentDiv = document.getElementById('makale-content');
+
+                data.forEach((article, index) => {
+                    const articleTitle = document.createElement('h3');
+                    articleTitle.innerHTML = `<a href="#" data-index="${index}">${article.title}</a>`;
+                    articlesList.appendChild(articleTitle);
+                    
+                    // Event listener to reveal content when the title is clicked
+                    articleTitle.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const articleIndex = event.target.getAttribute('data-index');
+                        contentDiv.innerHTML = `<h3>${data[articleIndex].title}</h3><p>${data[articleIndex].content}</p>`;
+                    });
+                });
+            });
+    </script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
